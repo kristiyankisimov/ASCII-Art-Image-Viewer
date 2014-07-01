@@ -20,9 +20,9 @@ public class AsciiViewer {
         } else if (intensity > 160 && intensity <= 200) {
             System.out.print("^");
         } else if (intensity > 120 && intensity <= 160) {
-            System.out.print("%");
-        } else if (intensity > 80 && intensity <= 120) {
             System.out.print("*");
+        } else if (intensity > 80 && intensity <= 120) {
+            System.out.print("%");
         } else if (intensity > 40 && intensity <= 80) {
             System.out.print("#");
         } else {
