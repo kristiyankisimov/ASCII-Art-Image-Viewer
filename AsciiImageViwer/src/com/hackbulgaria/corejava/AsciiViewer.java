@@ -32,7 +32,11 @@ public class AsciiViewer {
 
     private static int getStep(BufferedImage image) {
         final int width = image.getWidth();
-        return width > CONSOLE_WIDTH ? width / CONSOLE_WIDTH : 1;
+        int step = 1;
+        if (CONSOLE_WIDTH < width) {
+            step = width / CONSOLE_WIDTH + 1;
+        }
+        return step;
     }
 
     private static int getAverage(int xCoordinate, int yCoordinate, int step, BufferedImage image) {
